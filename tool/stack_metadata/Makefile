@@ -12,7 +12,7 @@ COMMON         := $(shell readlink -f ../../common)
 CC		:= gcc
 CFLAGS		:= -O3 -g -Wall -Iinclude -I$(COMMON)/include \
 		   -specs $(POPCORN_X86_64)/lib/musl-gcc.specs
-LDFLAGS	:= -static
+LDFLAGS	:= -static -L/usr/lib
 LIB    	:= -lelf
 
 HDR := $(shell ls include/*.h) $(shell ls $(COMMON)/include/*.h)
