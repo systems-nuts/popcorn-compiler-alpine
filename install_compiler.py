@@ -342,7 +342,7 @@ def install_clang_llvm(base_path, install_path, num_threads, llvm_targets):
     else:
         cmake_flags = ['-DCMAKE_INSTALL_PREFIX={}'.format(install_path),
                        '-DLLVM_TARGETS_TO_BUILD={}'.format(llvm_targets),
-                       '-DCMAKE_BUILD_TYPE=Debug',
+                       '-DCMAKE_BUILD_TYPE=Release',
                        '-DLLVM_ENABLE_RTTI=ON',
                        '-DBUILD_SHARED_LIBS=ON',
                        '-DLLVM_EXTERNAL_PROJECTS="clang;"',
